@@ -13,7 +13,19 @@ class MainTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
+        
+        NetworkManager.shared.getNewsFromApi { [weak self] result in
+            //guard let self = self else { return }
+            
+            switch result {
+                case .success(let response):
+                    print("RESPONSE MAIN TABLE VIEW CONTROLLER => \(response)")
+                case .failure(let error):
+                    print("error: \(error)")
+                    //self.hideActivityIndicator()
+                }
+            }
+        }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return news.count
