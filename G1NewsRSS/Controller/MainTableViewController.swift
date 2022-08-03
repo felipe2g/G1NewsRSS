@@ -9,17 +9,27 @@ import UIKit
 
 class MainTableViewController: UITableViewController {
     
-    var news: [String] = ["Noticias", "Teste", "teste"]
+    var news: [NewsAdapter] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         NetworkManager.shared.getNewsFromApi { [weak self] result in
-            //guard let self = self else { return }
+            guard let self = self else { return }
             
             switch result {
                 case .success(let response):
-                    print("RESPONSE MAIN TABLE VIEW CONTROLLER => \(response)")
+                    for item in response {
+                        if let imageURL = item.mediaContent?.url {
+                            let data = NewsAdapter(title: item.title, link: item.link, description: item.description, urlImage: imageURL)
+                            self.news.append(data)
+                        }
+                    }
+                // Is important reload UI with main thread, to prevent lag on application
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    //self.hideActivityIndicator()
+                }
                 case .failure(let error):
                     print("error: \(error)")
                     //self.hideActivityIndicator()
@@ -34,7 +44,8 @@ class MainTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         
-        cell.prepare(newsTitle: news[indexPath.row])
+        print(news[indexPath.row])
+        cell.prepare(with: news[indexPath.row])
         
         return cell
     }

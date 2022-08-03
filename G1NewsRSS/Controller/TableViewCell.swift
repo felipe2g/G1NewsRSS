@@ -10,8 +10,8 @@ import UIKit
 class TableViewCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     
-    func prepare(newsTitle: String) {
-        title.text = newsTitle
+    func prepare(with newsItem: NewsAdapter) {
+        title.text = newsItem.title
     }
     
     override func awakeFromNib() {
