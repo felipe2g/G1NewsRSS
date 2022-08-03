@@ -22,7 +22,7 @@ class NetworkManager {
     
     private init() { }
     
-    func getNewsFromApi(completion: @escaping (Result<Rss, ResultNewsError>) -> Void ) {
+    func getNewsFromApi(completion: @escaping (Result<[NewsItem], ResultNewsError>) -> Void ) {
         // Setup url
         guard let url = Constants.G1API else {
             completion(.failure(.badURL))
@@ -45,7 +45,7 @@ class NetworkManager {
             do {
                 let decoder = XMLDecoder()
                 let result = try decoder.decode(Rss.self, from: data)
-                completion(.success(result))
+                completion(.success(result.channel.item))
             } catch {
                 print("Error info: \(error)")
                 completion(.failure(.noData))

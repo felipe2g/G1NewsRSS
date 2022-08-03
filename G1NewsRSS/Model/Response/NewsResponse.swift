@@ -13,10 +13,10 @@ struct Rss: Codable {
 
 struct Channel: Codable {
     let title, link, description: String
-    let item: [Item]
+    let item: [NewsItem]
 }
 
-struct Item: Codable {
+struct NewsItem: Codable {
     let title: String
     let link: String
     let description: String
