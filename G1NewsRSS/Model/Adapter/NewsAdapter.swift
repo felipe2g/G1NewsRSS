@@ -14,11 +14,13 @@ struct NewsAdapter {
     let link: String
     let description: String?
     let urlImage: String
+    let itemUrl: String
     
-    init(title: String, link: String, description: String, urlImage: String) {
+    init(title: String, link: String, description: String, urlImage: String, itemUrl: String) {
         self.title = title
         self.link = link
         self.description = description
         self.urlImage = urlImage
+        self.itemUrl = itemUrl
     }
 }

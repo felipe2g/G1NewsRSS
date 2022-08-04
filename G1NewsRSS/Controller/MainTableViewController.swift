@@ -21,7 +21,7 @@ class MainTableViewController: UITableViewController {
                 case .success(let response):
                     for item in response {
                         if let imageURL = item.mediaContent?.url {
-                            let data = NewsAdapter(title: item.title, link: item.link, description: item.description, urlImage: imageURL)
+                            let data = NewsAdapter(title: item.title, link: item.link, description: item.description, urlImage: imageURL, itemUrl: item.link)
                             self.news.append(data)
                         }
                     }
@@ -49,4 +49,10 @@ class MainTableViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            if let url = URL(string: news[indexPath.row].itemUrl) {
+                UIApplication.shared.open(url)
+            }
+        }
 }
