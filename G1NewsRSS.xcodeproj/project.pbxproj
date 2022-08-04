@@ -20,23 +20,6 @@
 		FE7E0C11E6C610E2A184B19C /* Pods_G1NewsRSS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE19A39666800F0ABB6829E /* Pods_G1NewsRSS.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		F9E768C6289B14540093C6EF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F9E768A7289B14500093C6EF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F9E768AE289B14500093C6EF;
-			remoteInfo = G1NewsRSS;
-		};
-		F9E768D1289B14540093C6EF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F9E768A7289B14500093C6EF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F9E768AE289B14500093C6EF;
-			remoteInfo = G1NewsRSS;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		AE7A2750DFA74CAF9DA7E2DE /* Pods-G1NewsRSS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-G1NewsRSS.release.xcconfig"; path = "Target Support Files/Pods-G1NewsRSS/Pods-G1NewsRSS.release.xcconfig"; sourceTree = "<group>"; };
 		BBE19A39666800F0ABB6829E /* Pods_G1NewsRSS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_G1NewsRSS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,8 +31,6 @@
 		F9E768BB289B14530093C6EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9E768BE289B14530093C6EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9E768C0289B14530093C6EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9E768C5289B14540093C6EF /* G1NewsRSSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = G1NewsRSSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9E768D0289B14540093C6EF /* G1NewsRSSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = G1NewsRSSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9E768E4289B15E10093C6EF /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		F9E768E6289B172E0093C6EF /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		F9E768E9289B2C200093C6EF /* NewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResponse.swift; sourceTree = "<group>"; };
@@ -63,20 +44,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE7E0C11E6C610E2A184B19C /* Pods_G1NewsRSS.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F9E768C2289B14540093C6EF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F9E768CD289B14540093C6EF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,8 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				F9E768AF289B14500093C6EF /* G1NewsRSS.app */,
-				F9E768C5289B14540093C6EF /* G1NewsRSSTests.xctest */,
-				F9E768D0289B14540093C6EF /* G1NewsRSSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -208,42 +173,6 @@
 			productReference = F9E768AF289B14500093C6EF /* G1NewsRSS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F9E768C4289B14540093C6EF /* G1NewsRSSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F9E768DC289B14540093C6EF /* Build configuration list for PBXNativeTarget "G1NewsRSSTests" */;
-			buildPhases = (
-				F9E768C1289B14540093C6EF /* Sources */,
-				F9E768C2289B14540093C6EF /* Frameworks */,
-				F9E768C3289B14540093C6EF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F9E768C7289B14540093C6EF /* PBXTargetDependency */,
-			);
-			name = G1NewsRSSTests;
-			productName = G1NewsRSSTests;
-			productReference = F9E768C5289B14540093C6EF /* G1NewsRSSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		F9E768CF289B14540093C6EF /* G1NewsRSSUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F9E768DF289B14540093C6EF /* Build configuration list for PBXNativeTarget "G1NewsRSSUITests" */;
-			buildPhases = (
-				F9E768CC289B14540093C6EF /* Sources */,
-				F9E768CD289B14540093C6EF /* Frameworks */,
-				F9E768CE289B14540093C6EF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F9E768D2289B14540093C6EF /* PBXTargetDependency */,
-			);
-			name = G1NewsRSSUITests;
-			productName = G1NewsRSSUITests;
-			productReference = F9E768D0289B14540093C6EF /* G1NewsRSSUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -255,14 +184,6 @@
 				TargetAttributes = {
 					F9E768AE289B14500093C6EF = {
 						CreatedOnToolsVersion = 12.5;
-					};
-					F9E768C4289B14540093C6EF = {
-						CreatedOnToolsVersion = 12.5;
-						TestTargetID = F9E768AE289B14500093C6EF;
-					};
-					F9E768CF289B14540093C6EF = {
-						CreatedOnToolsVersion = 12.5;
-						TestTargetID = F9E768AE289B14500093C6EF;
 					};
 				};
 			};
@@ -280,8 +201,6 @@
 			projectRoot = "";
 			targets = (
 				F9E768AE289B14500093C6EF /* G1NewsRSS */,
-				F9E768C4289B14540093C6EF /* G1NewsRSSTests */,
-				F9E768CF289B14540093C6EF /* G1NewsRSSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -294,20 +213,6 @@
 				F9E768BF289B14530093C6EF /* LaunchScreen.storyboard in Resources */,
 				F9E768BC289B14530093C6EF /* Assets.xcassets in Resources */,
 				F9E768BA289B14500093C6EF /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F9E768C3289B14540093C6EF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F9E768CE289B14540093C6EF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,34 +275,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F9E768C1289B14540093C6EF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F9E768CC289B14540093C6EF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F9E768C7289B14540093C6EF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F9E768AE289B14500093C6EF /* G1NewsRSS */;
-			targetProxy = F9E768C6289B14540093C6EF /* PBXContainerItemProxy */;
-		};
-		F9E768D2289B14540093C6EF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F9E768AE289B14500093C6EF /* G1NewsRSS */;
-			targetProxy = F9E768D1289B14540093C6EF /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F9E768B8289B14500093C6EF /* Main.storyboard */ = {
@@ -470,7 +348,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -525,7 +403,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -573,86 +451,6 @@
 			};
 			name = Release;
 		};
-		F9E768DD289B14540093C6EF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = G1NewsRSSTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = felipeguimaraes.G1NewsRSSTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/G1NewsRSS.app/G1NewsRSS";
-			};
-			name = Debug;
-		};
-		F9E768DE289B14540093C6EF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = G1NewsRSSTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = felipeguimaraes.G1NewsRSSTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/G1NewsRSS.app/G1NewsRSS";
-			};
-			name = Release;
-		};
-		F9E768E0289B14540093C6EF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = G1NewsRSSUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = felipeguimaraes.G1NewsRSSUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = G1NewsRSS;
-			};
-			name = Debug;
-		};
-		F9E768E1289B14540093C6EF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = G1NewsRSSUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = felipeguimaraes.G1NewsRSSUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = G1NewsRSS;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -670,24 +468,6 @@
 			buildConfigurations = (
 				F9E768DA289B14540093C6EF /* Debug */,
 				F9E768DB289B14540093C6EF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F9E768DC289B14540093C6EF /* Build configuration list for PBXNativeTarget "G1NewsRSSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F9E768DD289B14540093C6EF /* Debug */,
-				F9E768DE289B14540093C6EF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F9E768DF289B14540093C6EF /* Build configuration list for PBXNativeTarget "G1NewsRSSUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F9E768E0289B14540093C6EF /* Debug */,
-				F9E768E1289B14540093C6EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
