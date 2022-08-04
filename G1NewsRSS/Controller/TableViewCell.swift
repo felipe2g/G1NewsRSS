@@ -14,7 +14,18 @@ class TableViewCell: UITableViewCell {
     
     func prepare(with newsItem: NewsAdapter) {
         title.text = newsItem.title
-        newsItemDescription.text = newsItem.description
+        
+        if let description = newsItem.description {
+            let matched = matches(for: "<[^>]*>", in: description)
+            var substring: String = description
+            
+            for ocurrence in matched {
+                substring = substring.replacingOccurrences(of: ocurrence, with: "")
+            }
+            
+            let normalized = substring.trimmingCharacters(in: .whitespacesAndNewlines)
+            newsItemDescription.text = normalized
+        }
         
         guard let url = URL(string: newsItem.urlImage) else {
             return
@@ -47,14 +58,5 @@ class TableViewCell: UITableViewCell {
             print("invalid regex: \(error.localizedDescription)")
             return []
         }
-    }
-    
-    func parseDescriptionFromXML(description: String) -> String {
-        let matched = matches(for: "<!\\[[a-zA-Z]+\\[.*\\]]>", in: description)
-        let parsed = description.replacingOccurrences(of: matched[0], with: "")
-        let index = parsed.index(parsed.startIndex, offsetBy: 140)
-        let textWithOnlyHundredCharacters = parsed[..<index]
-        
-        return String(textWithOnlyHundredCharacters)
     }
 }
