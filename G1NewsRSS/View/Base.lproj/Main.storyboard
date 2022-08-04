@@ -16,23 +16,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="51" id="wLi-oT-Uim" customClass="TableViewCell" customModule="G1NewsRSS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="51"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="251" id="wLi-oT-Uim" customClass="TableViewCell" customModule="G1NewsRSS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="251"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wLi-oT-Uim" id="c3d-68-6vQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="51"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="251"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qpl-HH-IdY">
-                                            <rect key="frame" x="20" y="11" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qpl-HH-IdY">
+                                            <rect key="frame" x="8" y="8" width="398" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTE-2B-bGE">
+                                            <rect key="frame" x="8" y="225" width="398" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hxz-5K-2kJ">
+                                            <rect key="frame" x="8" y="37" width="398" height="180"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="180" id="e3L-6k-3Xw"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="hxz-5K-2kJ" firstAttribute="leading" secondItem="c3d-68-6vQ" secondAttribute="leading" constant="8" id="1dC-vA-mqb"/>
+                                        <constraint firstAttribute="trailing" secondItem="Qpl-HH-IdY" secondAttribute="trailing" constant="8" id="1y8-QX-6gj"/>
+                                        <constraint firstItem="RTE-2B-bGE" firstAttribute="trailing" secondItem="hxz-5K-2kJ" secondAttribute="trailing" id="FAW-u3-ALM"/>
+                                        <constraint firstItem="hxz-5K-2kJ" firstAttribute="top" secondItem="Qpl-HH-IdY" secondAttribute="bottom" constant="8" id="nRy-SO-tfA"/>
+                                        <constraint firstItem="RTE-2B-bGE" firstAttribute="leading" secondItem="hxz-5K-2kJ" secondAttribute="leading" id="sgM-Xr-V7T"/>
+                                        <constraint firstAttribute="trailing" secondItem="RTE-2B-bGE" secondAttribute="trailing" constant="8" id="t4f-G4-gsW"/>
+                                        <constraint firstItem="Qpl-HH-IdY" firstAttribute="top" secondItem="c3d-68-6vQ" secondAttribute="top" constant="8" id="tAX-17-ano"/>
+                                        <constraint firstItem="RTE-2B-bGE" firstAttribute="leading" secondItem="c3d-68-6vQ" secondAttribute="leading" constant="8" id="vs8-bp-BgT"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="RTE-2B-bGE" secondAttribute="bottom" constant="-5.5" id="wT0-Rl-BF2"/>
+                                        <constraint firstAttribute="trailing" secondItem="hxz-5K-2kJ" secondAttribute="trailing" constant="8" id="z1R-YC-CUj"/>
+                                        <constraint firstItem="Qpl-HH-IdY" firstAttribute="leading" secondItem="c3d-68-6vQ" secondAttribute="leading" constant="8" id="zNv-fK-MD6"/>
+                                        <constraint firstItem="RTE-2B-bGE" firstAttribute="top" secondItem="hxz-5K-2kJ" secondAttribute="bottom" constant="8" id="zU6-EL-wEl"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="imageNewsItem" destination="hxz-5K-2kJ" id="R57-8V-6Hb"/>
+                                    <outlet property="newsItemDescription" destination="RTE-2B-bGE" id="VsX-65-6xF"/>
                                     <outlet property="title" destination="Qpl-HH-IdY" id="P60-z7-GUJ"/>
                                 </connections>
                             </tableViewCell>

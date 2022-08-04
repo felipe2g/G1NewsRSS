@@ -12,7 +12,7 @@ struct NewsAdapter {
     
     let title: String
     let link: String
-    let description: String
+    let description: String?
     let urlImage: String
     
     init(title: String, link: String, description: String, urlImage: String) {
