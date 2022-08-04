@@ -43,8 +43,6 @@ class MainTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
-        
-        print(news[indexPath.row])
         cell.prepare(with: news[indexPath.row])
         
         return cell
