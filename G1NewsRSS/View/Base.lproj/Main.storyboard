@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--G1-->
         <scene sceneID="wZa-b2-epc">
             <objects>
                 <tableViewController id="bi4-rt-3OV" customClass="MainTableViewController" customModule="G1NewsRSS" customModuleProvider="target" sceneMemberID="viewController">
@@ -23,7 +23,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="251"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qpl-HH-IdY">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qpl-HH-IdY">
                                             <rect key="frame" x="8" y="8" width="398" height="21"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -31,9 +31,6 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTE-2B-bGE">
                                             <rect key="frame" x="8" y="225" width="398" height="20.5"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="20.5" id="3yB-hU-3yQ"/>
-                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -60,6 +57,7 @@
                                         <constraint firstItem="RTE-2B-bGE" firstAttribute="top" secondItem="hxz-5K-2kJ" secondAttribute="bottom" constant="8" id="zU6-EL-wEl"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <outlet property="imageNewsItem" destination="hxz-5K-2kJ" id="R57-8V-6Hb"/>
                                     <outlet property="newsItemDescription" destination="RTE-2B-bGE" id="VsX-65-6xF"/>
@@ -72,7 +70,7 @@
                             <outlet property="delegate" destination="bi4-rt-3OV" id="LYN-xj-OpB"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="F2G-pz-eid"/>
+                    <navigationItem key="navigationItem" title="G1" id="F2G-pz-eid"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="poe-Da-Wr3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
